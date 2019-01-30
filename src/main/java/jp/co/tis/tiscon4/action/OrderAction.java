@@ -61,8 +61,13 @@ public class OrderAction {
      * @return HTTPレスポンス
      */
     @InjectForm(form = AcceptForm.class)
-    @OnError(type = ApplicationException.class, path = "acceptance.html")
+    @OnError(type = ApplicationException.class, path = "index.html")
     public HttpResponse inputUser(HttpRequest req, ExecutionContext ctx) {
+        AcceptForm acceptForm= ctx.getRequestScopedVar("form");
+        InsuranceOrder insOrder = BeanUtil.createAndCopy(InsuranceOrder.class, acceptForm);
+        SessionUtil.delete(ctx, "insOrder");
+        SessionUtil.put(ctx, "insOrder", insOrder);
+
         ctx.setRequestScopedVar("form", new UserForm());
         ctx.setRequestScopedVar("genderTypes", GenderType.values());
         ctx.setRequestScopedVar("marriedTypes", MarriedType.values());
@@ -98,7 +103,11 @@ public class OrderAction {
 
         ctx.setRequestScopedVar("form", new JobForm());
         ctx.setRequestScopedVar("industryTypes", IndustryType.values());
-
+        //学生と主婦は官僚画面に飛ばす
+        if (form.getJob().equals("学生") ||form.getJob().equals("主婦")) {
+            UniversalDao.insert(insOrder);
+            return new HttpResponse("completed.html");
+        }
         return new HttpResponse("job.html");
     }
 

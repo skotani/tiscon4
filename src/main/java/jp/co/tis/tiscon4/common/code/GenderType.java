@@ -5,7 +5,9 @@ public enum GenderType implements CodeEnum {
     /** 男性 */
     MALE("male", "男性"),
     /** 女性 */
-    FEMALE("female", "女性");
+    FEMALE("female", "女性"),
+    /**その他*/
+    OTHER("other", "その他");
 
     /** 性別のラベル */
     private final String label;

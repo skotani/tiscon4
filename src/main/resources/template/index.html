@@ -15,6 +15,26 @@
 
 <nav th:insert="header.html :: header"></nav>
 
+
+
+<!------>
+<!-- いらない？？？
+<div class="full height image">
+    <div class="ui main container">
+        <div class="ui information container">
+            <div class="acceptance-icon" style="border:solid 3px #4B610B;">
+                <img src="/img/icon_treat.png">
+            </div>
+            <div class="acceptance-icon" style="border:solid 3px #B40404;">
+                <img src="/img/icon_treatLady.png">
+            </div>
+            <div class="acceptance-icon" style="border:solid 3px #0174DF;">
+                <img src="/img/icon_future.png">
+            </div>
+            -->
+            <!------>
+
+
 <div class="full height image">
     <div class="ui main container">
         <div class="menu bar"></div>
@@ -25,36 +45,190 @@
             <div class="index-block">
                 <div class="index-icon" style="border:solid 3px #4B610B;">
                     <img src="/img/icon_treat.png">
-                    <p class="index-text" style="top:40px;">★病気、ケガに備える</p>
+                    <p class="" style="top:40px;">★病気、ケガに備える..........</p>
+
+　　　　　　　　　　<!--- ここから --->
+
+
+                    <div class="ui middle center aligned grid">
+                        <div class="ui segment metrixir" style="width: 700px;margin: 30px;">
+                            <h1 class="ui aligned header teal center">ご加入条件確認</h1>
+
+                            <form class="ui form" method="post" action="/action/order/inputUser">
+
+                                <div class="ui statement">
+                                    以下の事項は保険の引受判断のための重要事項であり、被保険者様は必ず事実を告知する必要があります。
+                                    事実と異なることを告知された場合には、ご契約を無効とさせて頂く場合があります。
+                                </div>
+
+                                <div class="ui info message">
+                                    <div class="header">本保険は、以下の条件を満たす場合のみご加入頂くことができます。</div>
+                                    <ol class="ui list">
+                                        <li value="●">過去5年以内に、以下の病気で7日間以上にわたる医師の診察・検査・治療・投薬をうけていないこと。</li>
+                                        <ol>
+                                            <li value="－">がん</li>
+                                            <li value="－">急性心筋梗塞</li>
+                                            <li value="－">脳卒中</li>
+                                            <li value="－">糖尿病</li>
+                                        </ol>
+                                        <li value="●">過去2年以内に、健康診断・人間ドックで異常（要再検査・要精密検査・要治療）を指摘されていないこと。</li>
+                                        <li value="●">障害者手帳を持っていないこと。</li>
+
+                                    </ol>
+                                </div>
+
+                                <div class="ui checkbox" style="margin: 10px;">
+                                    <input type="checkbox" name="acceptance" th:value="1"/>
+                                    <label>全ての加入条件を満たしていることを確認しました。</label>
+                                </div>
+
+                                <input type="hidden" name="insuranceType" value="treat"/>
+
+                                <button class="ui fluid teal button">申し込み（個人情報の入力）</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--- ここまで --->
+
+
+                    <!---
                     <a href="/action/order/accept?insuranceType=treat" class="index-button"
                        style="top:90px; background-color: #4B610B;">
                         申し込み
                     </a>
+                    --->
+
                 </div>
 
                 <div class="index-icon" style="border:solid 3px #B40404;">
                     <img src="/img/icon_treatLady.png">
-                    <p class="index-text" style="top:10px;">★病気、ケガに備える</p>
-                    <p class="index-text" style="top:20px;">★女性特有の病気への特約つき</p>
+                    <p class="" style="top:10px;">★病気、ケガに備える</p>
+                    <p class="" style="top:20px;">★女性特有の病気への特約つき</p>
+
+<!--- ここから --->
+                    <div class="ui middle center aligned grid">
+                        <div class="ui segment metrixir" style="width: 700px;margin: 30px;">
+                            <h1 class="ui aligned header teal center">ご加入条件確認</h1>
+
+                            <form class="ui form" method="post" action="/action/order/inputUser">
+
+                                <div class="ui statement">
+                                    以下の事項は保険の引受判断のための重要事項であり、被保険者様は必ず事実を告知する必要があります。
+                                    事実と異なることを告知された場合には、ご契約を無効とさせて頂く場合があります。
+                                </div>
+
+                                <div class="ui info message">
+                                    <div class="header">本保険は、以下の条件を満たす場合のみご加入頂くことができます。</div>
+                                    <ol class="ui list">
+                                        <li value="●">過去5年以内に、以下の病気で7日間以上にわたる医師の診察・検査・治療・投薬をうけていないこと。</li>
+                                        <ol>
+                                            <li value="－">がん</li>
+                                            <li value="－">急性心筋梗塞</li>
+                                            <li value="－">脳卒中</li>
+                                            <li value="－">糖尿病</li>
+                                            <li value="－">子宮外妊娠</li>
+                                            <li value="－">子宮筋腫</li>
+                                        </ol>
+                                        <li value="●">現在妊娠していないこと。</li>
+                                        <li value="●">過去2年以内に、健康診断・人間ドックで異常（要再検査・要精密検査・要治療）を指摘されていないこと。</li>
+                                        <li value="●">障害者手帳を持っていないこと。</li>
+
+                                    </ol>
+                                </div>
+
+                                <div class="ui checkbox" style="margin: 10px;">
+                                    <input type="checkbox" name="acceptance" th:value="1"/>
+                                    <label>全ての加入条件を満たしていることを確認しました。</label>
+                                </div>
+
+                                <input type="hidden" name="insuranceType" value="treatLady"/>
+
+                                <button class="ui fluid teal button">申し込み （個人情報の入力）</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                   <!--- ここまで --->
+
+
+
+<!---
                     <a href="/action/order/accept?insuranceType=treatLady" class="index-button"
-                       style="top:42px; background-color: #B40404;">
+                       style="background-color: #B40404;">   (top: 42px;が冒頭にあった)
                         申し込み
                     </a>
+                --->
                 </div>
 
                 <div class="index-icon" style="border:solid 3px #0174DF;">
                     <img src="/img/icon_future.png">
-                    <p class="index-text" style="top:30px;">★がんに備える</p>
+                    <p class="" style="top:30px;">★がんに備える</p>
+
+<!--- ここから --->
+
+                    <div class="ui middle center aligned grid">
+                        <div class="ui segment metrixir" style="width: 700px;margin: 30px;">
+                            <h1 class="ui aligned header teal center">ご加入条件確認</h1>
+
+                            <form class="ui form" method="post" action="/action/order/inputUser">
+
+                                <div class="ui statement">
+                                    以下の事項は保険の引受判断のための重要事項であり、被保険者様は必ず事実を告知する必要があります。
+                                    事実と異なることを告知された場合には、ご契約を無効とさせて頂く場合があります。
+                                </div>
+
+                                <div class="ui info message">
+                                    <div class="header">本保険は、以下の条件を満たす場合のみご加入頂くことができます。</div>
+                                    <ol class="ui list">
+                                        <li value="●">過去5年以内に、以下の病気で7日間以上にわたる医師の診察・検査・治療・投薬をうけていないこと。</li>
+                                        <ol>
+                                            <li value="－">がん</li>
+                                            <li value="－">急性心筋梗塞</li>
+                                            <li value="－">脳卒中</li>
+                                            <li value="－">糖尿病</li>
+                                        </ol>
+                                        <li value="●">過去2年以内に、健康診断・人間ドックで異常（要再検査・要精密検査・要治療）を指摘されていないこと。</li>
+                                        <li value="●">障害者手帳を持っていないこと。</li>
+
+                                    </ol>
+                                </div>
+
+                                <div class="ui checkbox" style="margin: 10px;">
+                                    <input type="checkbox" name="acceptance" th:value="1"/>
+                                    <label>全ての加入条件を満たしていることを確認しました。</label>
+                                </div>
+
+                                <input type="hidden" name="insuranceType" value="future"/>
+
+                                <button class="ui fluid teal button">申し込み（個人情報の入力）</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+            <!--- ここまで --->
+
+
+                    <!---
                     <a href="/action/order/accept?insuranceType=future" class="index-button"
                        style="top:80px; background-color: #0174DF;">
                         申し込み
                     </a>
+                    --->
                 </div>
+                    </div>
+              </div>
+
             </div>
 
         </div>
-
     </div>
-</div>
+            </div>
+    </div>
 </div></body>
 </html>
