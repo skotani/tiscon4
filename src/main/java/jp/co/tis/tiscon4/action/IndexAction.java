@@ -11,7 +11,7 @@ import nablarch.fw.web.HttpResponse;
  */
 public class IndexAction {
 
-    /**
+     /**
      * トップ画面を表示する。
      *
      * @param req リクエストコンテキスト

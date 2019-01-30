@@ -123,7 +123,7 @@ ul.label {
 
 .index-block{
     margin: 0 auto;
-    width: 800px;
+    /*width: 800px*/;
     justify-content:space-around;
     display: flex;
 }
@@ -134,8 +134,8 @@ ul.label {
     font-weight:bold;
     background:#FFF;
     border-radius:10px;
-    width: 250px;
-    height: 300px;
+    width: 500px; /* 250px */
+    /* height: 300px; */
 }
 
 .index-text{
