@@ -52,7 +52,7 @@ public class Tiscon4DomainBean {
     private String zipCode;
 
     /** 住所 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字とASCII文字", message = "{domain.illegalCharacter}")
     @Length(max = 255)
     private String address;
 
@@ -96,7 +96,7 @@ public class Tiscon4DomainBean {
     private String medicalHistory;
 
     /** 勤務先 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字とASCII文字", message = "{domain.illegalCharacter}")
     @Length(max = 255)
     private String employerName;
 
@@ -105,7 +105,7 @@ public class Tiscon4DomainBean {
     private String employerZipCode;
 
     /** 勤務先住所 */
-    @SystemChar(charsetDef = "全角文字", message = "{domain.illegalCharacter}")
+    @SystemChar(charsetDef = "全角文字とASCII文字", message = "{domain.illegalCharacter}")
     @Length(max = 255)
     private String employerAddress;
 

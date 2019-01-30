@@ -41,10 +41,10 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <label>お勤め先名（全角）</label>
+                                    <label>お勤め先名（全角/半角どちらでも可）</label>
                                 </td>
                                 <td>
-                                    <p>例：ＴＩＳＣＯＮ株式会社</p>
+                                    <p>例：TISCON株式会社</p>
                                     <div class="field " th:classappend="${errors.hasError('employerName')} ? 'error'">
                                         <input type="text" name="employerName" th:value="${form.employerName}"/>
                                         <p th:if="${errors.hasError('employerName')}"
@@ -69,10 +69,10 @@
                             </tr>
                             <tr>
                                 <td style="white-space: nowrap;">
-                                    <label>お勤め先住所（全角）</label>
+                                    <label>お勤め先住所（全角/半角文字どちらも可）</label>
                                 </td>
                                 <td>
-                                    <p>例：東京都新宿区西新宿８－１７－１</p>
+                                    <p>例：東京都新宿区西新宿8-17-1</p>
                                     <div class="field" th:classappend="${errors.hasError('employerAddress')} ? 'error'">
                                         <input type="text" name="employerAddress" th:value="${form.employerAddress}"/>
                                         <p th:if="${errors.hasError('employerAddress')}"
